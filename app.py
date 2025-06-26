@@ -40,6 +40,7 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)})
 
+
 # ✅ Correct way to bind the app to Render's dynamic port
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 10000))
