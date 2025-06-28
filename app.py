@@ -2,9 +2,11 @@ import os
 import joblib
 import pandas as pd
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Load model and encoders
 model = joblib.load("XGBoost_Treatment_Model.pkl")
